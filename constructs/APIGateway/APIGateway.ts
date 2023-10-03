@@ -1,12 +1,12 @@
 import { Stack } from 'aws-cdk-lib';
 import { Construct } from 'constructs';
-import { ApiKey, Resource, RestApi, UsagePlan } from 'aws-cdk-lib/aws-apigateway';
+import { ApiKey, RestApi, UsagePlan } from 'aws-cdk-lib/aws-apigateway';
 
 type ApiGatewayProps = {
-    serviceName: string,
-    stage: string,
-    rateLimit?: number,
-    burstLimit?: number,
+    serviceName: string;
+    stage: string;
+    rateLimit?: number;
+    burstLimit?: number;
 }
 
 export class APIGateway extends Construct {
