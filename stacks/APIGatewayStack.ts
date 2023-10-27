@@ -9,7 +9,7 @@ export class APIGatewayStack extends NestedStack {
     constructor(scope: Construct, id: string, props?: NestedStackProps) {
         super(scope, id, props);
 
-        const apiGateway = new APIGateway(this, 'EnergyDrinkSelectorAPI', {
+        const apiGateway = new APIGateway(this, id, {
             serviceName: 'energy-drink-selector',
             stage: 'dev',
         });
