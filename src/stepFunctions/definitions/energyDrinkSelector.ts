@@ -39,9 +39,19 @@ export const energyDrinkSelectorDefinition = ({
             .when(Condition.isPresent('$.sugar'), isSugarFree
                 .when(Condition.booleanEquals('$.sugar', true), new LambdaInvoke(stack, 'Sugar Logic', {
                     lambdaFunction: sugarLambdaFunction,
+                    resultSelector: {
+                        drinkName: JsonPath.stringAt('$.Payload.drinkName')
+                    },
+                    resultPath: '$.energyDrink',
+                    outputPath: '$.energyDrink'
                 }).addCatch(sugarPassState, { errors: ['States.ALL'] }))
                 .otherwise(new LambdaInvoke(stack, 'Sugar Free Logic', {
                     lambdaFunction: sugarFreeLambdaFunction,
+                    resultSelector: {
+                        drinkName: JsonPath.stringAt('$.Payload.drinkName')
+                    },
+                    resultPath: '$.energyDrink',
+                    outputPath: '$.energyDrink'
                 }).addCatch(sugarFreePassState, { errors: ['States.ALL'] }))
             )
             .otherwise(failState)
