@@ -9,7 +9,7 @@ This application is pretty bare bones and this is on purpose. AWS CDK constructs
 ## List of Posts
 
 1. [Let’s CDK: The Energy Drink Episodes](https://medium.com/aws-in-plain-english/lets-cdk-the-energy-drink-episodes-d23881031484)
-2. The Energy Drink Episodes 2: The Rise Of The Amazon API Gateway
+2. [The Energy Drink Episodes 2: The Rise Of The Amazon API Gateway](https://medium.com/aws-in-plain-english/the-energy-drink-episodes-2-the-rise-of-the-amazon-api-gateway-e43c49c00ce5)
 3. The Energy Drink Episodes 3: The Step Function Awakens
 4. The Energy Drink Episodes 4: The Return Of The Lambda Functions
 
